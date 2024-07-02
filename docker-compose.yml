@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "5499:5499"
+    environment:
+      - PORT=5499
+      - TOKEN=${TOKEN}
+      - MYTOKEN=${MYTOKEN}
+    volumes:
+      - .:/usr/src/app
